@@ -1,0 +1,164 @@
+/*
+Theme Name: Taverna da Impressão
+Theme URI: https://tavernadaimpressao.com.br
+Author: Taverna da Impressão
+Author URI: https://tavernadaimpressao.com.br
+Description: Tema personalizado para a loja Taverna da Impressão com suporte a WooCommerce.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: taverna
+Tags: e-commerce, woocommerce, responsive-layout, custom-background, custom-colors, custom-header, custom-menu
+*/
+
+:root {
+    --taverna-primary: #7D5B3A;
+    --taverna-secondary: #5A4430;
+    --taverna-accent: #D4AF37;
+    --taverna-background: #F5F5F5;
+    --taverna-text: #333333;
+    --taverna-light-text: #777777;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--taverna-background);
+    color: var(--taverna-text);
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+.site-header {
+    background-color: var(--taverna-primary);
+    color: white;
+    padding: 1rem 0;
+}
+
+.site-header a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.site-description {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Menu Principal */
+.main-navigation {
+    background-color: var(--taverna-secondary);
+}
+
+.main-navigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation li {
+    position: relative;
+}
+
+.main-navigation a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.main-navigation a:hover {
+    background-color: var(--taverna-accent);
+    color: var(--taverna-text);
+}
+
+/* Conteúdo */
+.site-content {
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Rodapé */
+.site-footer {
+    background-color: var(--taverna-primary);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.site-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* WooCommerce */
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    color: var(--taverna-primary);
+    font-size: 1.2rem;
+}
+
+.woocommerce ul.products li.product .price {
+    color: var(--taverna-secondary);
+    font-weight: bold;
+}
+
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button {
+    background-color: var(--taverna-primary);
+    color: white;
+}
+
+.woocommerce #respond input#submit:hover, 
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover, 
+.woocommerce input.button:hover {
+    background-color: var(--taverna-secondary);
+    color: white;
+}
+
+/* Produtos */
+.woocommerce div.product .product_title {
+    color: var(--taverna-primary);
+}
+
+.woocommerce div.product p.price, 
+.woocommerce div.product span.price {
+    color: var(--taverna-secondary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    background-color: var(--taverna-background);
+    border-color: var(--taverna-primary);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+    color: var(--taverna-primary);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-navigation ul {
+        flex-direction: column;
+    }
+    
+    .woocommerce ul.products[class*=columns-] li.product, 
+    .woocommerce-page ul.products[class*=columns-] li.product {
+        width: 100%;
+    }
+}
