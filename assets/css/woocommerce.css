@@ -1,0 +1,232 @@
+/**
+ * WooCommerce styles for Taverna da Impressão theme
+ */
+
+/* Shop Page */
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+    background-color: white;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.woocommerce ul.products li.product:hover,
+.woocommerce-page ul.products li.product:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    color: var(--taverna-primary);
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-top: 10px;
+}
+
+.woocommerce ul.products li.product .price {
+    color: var(--taverna-secondary);
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.woocommerce ul.products li.product .button {
+    background-color: var(--taverna-primary);
+    color: white;
+    border-radius: 3px;
+    font-weight: 500;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.woocommerce ul.products li.product .button:hover {
+    background-color: var(--taverna-secondary);
+}
+
+/* Single Product Page */
+.woocommerce div.product div.images img {
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.woocommerce div.product .product_title {
+    color: var(--taverna-primary);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.woocommerce div.product p.price, 
+.woocommerce div.product span.price {
+    color: var(--taverna-secondary);
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+    padding-left: 5px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+    border-radius: 3px 3px 0 0;
+    background-color: #f5f5f5;
+    padding: 0 15px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    background-color: white;
+    border-bottom-color: white;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+    color: var(--taverna-primary);
+    font-weight: 500;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel {
+    padding: 20px;
+    border: 1px solid #d3ced2;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+}
+
+.woocommerce-product-details__short-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt {
+    background-color: var(--taverna-primary);
+    border-radius: 3px;
+    padding: 12px 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.woocommerce #respond input#submit.alt:hover, 
+.woocommerce a.button.alt:hover, 
+.woocommerce button.button.alt:hover, 
+.woocommerce input.button.alt:hover {
+    background-color: var(--taverna-secondary);
+}
+
+/* 3D Print Badge */
+.taverna-3d-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--taverna-accent);
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 9;
+    border-radius: 0 4px 0 4px;
+}
+
+/* Cart and Checkout */
+.woocommerce-cart table.cart td.actions .coupon .input-text,
+.woocommerce-checkout .input-text {
+    padding: 8px 10px;
+    width: 120px;
+}
+
+.woocommerce-cart table.cart img {
+    width: 80px;
+}
+
+.woocommerce-cart table.cart th {
+    background-color: var(--taverna-primary);
+    color: white;
+}
+
+.woocommerce-cart table.cart td {
+    padding: 15px 12px;
+}
+
+.woocommerce-message,
+.woocommerce-info {
+    border-top-color: var(--taverna-primary);
+}
+
+.woocommerce-message::before,
+.woocommerce-info::before {
+    color: var(--taverna-primary);
+}
+
+/* Mini Cart */
+.site-header-cart {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-header-cart .cart-contents {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.site-header-cart .cart-contents:hover {
+    background-color: var(--taverna-secondary);
+}
+
+.site-header-cart .widget_shopping_cart {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 999999;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.site-header-cart:hover .widget_shopping_cart,
+.site-header-cart.focus .widget_shopping_cart {
+    display: block;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .woocommerce ul.products[class*=columns-] li.product, 
+    .woocommerce-page ul.products[class*=columns-] li.product {
+        width: 48%;
+        margin-right: 3.8%;
+        margin-bottom: 2.992em;
+    }
+    
+    .woocommerce ul.products[class*=columns-] li.product:nth-child(2n), 
+    .woocommerce-page ul.products[class*=columns-] li.product:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .woocommerce ul.products[class*=columns-] li.product, 
+    .woocommerce-page ul.products[class*=columns-] li.product {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .woocommerce-cart table.cart td.actions .coupon .input-text {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .woocommerce-cart table.cart td.actions .coupon .button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
